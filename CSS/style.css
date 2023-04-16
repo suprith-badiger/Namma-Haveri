@@ -1,0 +1,188 @@
+body{
+    color: rgb(61, 59, 59);
+    margin: 0;
+    padding: 0;
+}
+
+.intro-section{
+    background-image: url(../images/2022-06-14.jpg);
+    background-position: center;
+    background-size: cover;
+} 
+
+.title{
+    color: white;
+    font-size: 50px;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    padding: 25px 0 15px;
+}
+
+.banner{
+    margin: 23px 0 0;
+}
+
+#tagline{
+    font-family: 'Montserrat', 'sans-serif';
+    font-weight: 500;
+    margin: 15px 15px 28px;
+    padding-top: 4px;
+}
+
+.row{
+    padding: 30px;
+}
+
+.ban-container{
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.817);
+    border-radius: 2%;
+    padding: 10px;
+
+}
+
+.ban-container:hover{
+    background-color: rgba(255, 255, 255, 0.941);
+}
+
+.logo{
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+   
+.intro-discription{
+    font-family: 'Montserrat', 'sans-serif';
+    font-size: 17px;
+    font-weight: 500;
+    color: rgb(63, 62, 62);
+    border-radius: 2%;
+}
+
+#wellcome{
+    font-family: 'Ubuntu', 'sans-serif';
+    line-height: 1.5;
+    text-align: center;
+    font-weight: 600;
+}
+
+#discription{
+    margin-top: 5px;
+    padding: 20px;
+    text-align: left;
+}
+
+
+
+/* tourist places */
+
+.places h2,.Wild-life h2{
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    padding: 20px;
+    font-size: 33px;
+    font-weight: 600;
+}
+
+
+.card-container{
+    padding: 0 20px;
+    display: flex;
+}
+
+.card-container .card{
+    width: 33.33%;
+    margin: 10px;
+    box-shadow: 0px 3px 30px 0px rgb(0,0,0,0.25);
+    border-radius: 10px;
+    overflow: hidden;
+    border: none;
+}
+
+.card-container .card .card-img{
+    height: 250px;
+    overflow: hidden;
+
+}
+
+.card-container .card .card-content{
+    padding: 20px;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.card{
+    transition-duration: 200ms;
+}
+
+.card:hover{
+    scale: 1.03;
+    /* background-color: rgba(251, 255, 255, 0.815); */
+}
+
+
+.Wild-life .card-container .card{
+    width: 45%;
+    margin: 10px 53px;
+}
+
+.card-content h4{
+    color: rgba(53, 53, 53, 0.872);
+    font-weight: 600;
+    text-align: center;
+}
+
+.location{
+    padding: 10px 20px 10px 0;
+    text-align: left;
+    font-size: 20px;
+}
+
+.location .a{
+    text-decoration: none;
+}
+
+
+.small-text{
+    font-size: 10px;
+    text-decoration: none;
+    color: rgb(154, 154, 154);
+}
+
+a{ 
+    text-decoration: none;
+}
+
+
+.m-1{
+    border-radius: 100%;
+}
+
+.bg-dark{
+    margin-top: 30px;
+}
+
+#connect{
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+
+/* mobile view */
+
+
+@media (max-width:500px){
+    
+    /* mobile view of cards */
+    
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .card-container .card, .Wild-life .card-container .card {
+        width: 100%;
+        margin: 21px;
+        box-shadow: 0px 3px 30px 0px rgb(0 0 0 / 25%);
+        border-radius: 10px;
+        overflow: hidden;
+        border: none;
+    }  
+}
