@@ -10,13 +10,49 @@ body{
     background-size: cover;
 } 
 
-.title{
-    color: white;
-    font-size: 50px;
-    font-weight: bolder;
+.tile-container{
+    background-color: rgb(40, 40, 40);
+    display: inline-block;
     display: flex;
     justify-content: center;
-    padding: 25px 0 15px;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+}
+
+.title{
+    font-size: 60px;
+    font-weight:bolder;
+    align-items: center;
+    font-weight: bolder; 
+    position: relative;
+}
+
+.first-text{
+    margin-right: 25px;
+}
+
+
+.title.second-text:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: calc(100% + 10px );
+    background-color: rgb(40, 40, 40);
+    border-left: 3px solid white;
+   
+    animation: animate 3s steps(15) infinite;
+
+}
+
+@keyframes animate{
+    40%, 60%{
+        left: calc(100% + 15px );
+    }
+    100% {
+        left: 0%;
+    }
 }
 
 .banner{
@@ -37,9 +73,14 @@ body{
 .ban-container{
     margin-top: 20px;
     background-color: rgba(255, 255, 255, 0.817);
-    border-radius: 2%;
+    border-radius: 3%;
     padding: 10px;
 
+}
+
+
+.ban-card{
+    padding: 12px;
 }
 
 .ban-container:hover{
@@ -68,8 +109,13 @@ body{
 
 #discription{
     margin-top: 5px;
-    padding: 20px;
+    padding: 12px;
     text-align: left;
+}
+
+
+.row{
+    padding: 30px 80px 50px;
 }
 
 
@@ -79,28 +125,29 @@ body{
 .places h2,.Wild-life h2{
     font-family: 'Ubuntu', sans-serif;
     text-align: center;
-    padding: 20px;
+    padding: 30px 20px 20px;
     font-size: 33px;
     font-weight: 600;
 }
 
 
 .card-container{
-    padding: 0 20px;
+    padding: 0 50px;
     display: flex;
 }
 
 .card-container .card{
-    width: 33.33%;
-    margin: 10px;
-    box-shadow: 0px 3px 30px 0px rgb(0,0,0,0.25);
-    border-radius: 10px;
+    border-bottom-right-radius: 8%;
+    border-top-left-radius: 4%;
+    margin: 25px;
+    width: 30%;
+    box-shadow: 0px 3px 30px 0px rgba(0, 0, 0, 0.427);
     overflow: hidden;
     border: none;
 }
 
 .card-container .card .card-img{
-    height: 250px;
+    height: 200px;
     overflow: hidden;
 
 }
@@ -110,19 +157,15 @@ body{
     font-family: 'Montserrat', Arial, sans-serif;
 }
 
-.card{
-    transition-duration: 200ms;
-}
-
-.card:hover{
-    scale: 1.03;
-    /* background-color: rgba(251, 255, 255, 0.815); */
-}
 
 
 .Wild-life .card-container .card{
-    width: 45%;
+    width: 40%;
     margin: 10px 53px;
+}
+
+.Wild-life .card-container .card .card-img{
+    height: 250px;
 }
 
 .card-content h4{
@@ -153,6 +196,19 @@ a{
 }
 
 
+.reveal{
+    position: relative;
+    transform: translateY(100px);
+    opacity: 0;
+    transition:all 1s;
+}
+
+.reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+
 .m-1{
     border-radius: 100%;
 }
@@ -165,6 +221,40 @@ a{
     font-family: 'Montserrat', Arial, sans-serif;
 }
 
+.footer-container{
+    display: flex;
+    justify-content: center;
+}
+
+.footer-container .logos{
+    margin: 0 10px;
+}
+
+.logos{
+    opacity: 0;
+    transform: translateX(-100px);
+    transition : all 700ms;
+}
+
+.logos.active{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.logos:nth-child(1){
+    transition-delay: 300ms;
+}
+
+.logos:nth-child(2){
+    transition-delay: 500ms;
+}
+
+.logos:nth-child(3){
+    transition-delay: 700ms;
+}
+
+
+
 
 /* mobile view */
 
@@ -172,17 +262,78 @@ a{
 @media (max-width:500px){
     
     /* mobile view of cards */
+
+    .title{
+        font-size: 45px;
+        font-weight: 600;
+    }
+
+    .row{
+        padding: 0 10px 10px;
+        margin: 0 30px 30px;
+    }
+
+    #tagline{
+        font-family: 'Montserrat', 'sans-serif';
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    .banner{
+        margin-left: 17px;
+        width: 85%;
+    }
+
+    #wellcome{
+        font-family: 'Ubuntu', 'sans-serif';
+        text-align: center;
+    }
+    
+    #discription{
+        line-height: 1.5;
+        font-size: 14px;
+        text-align: left;
+    }
+
+
+
     
     .card-container {
         display: flex;
         flex-wrap: wrap;
     }
     .card-container .card, .Wild-life .card-container .card {
+        font-size: 16px;
         width: 100%;
         margin: 21px;
-        box-shadow: 0px 3px 30px 0px rgb(0 0 0 / 25%);
-        border-radius: 10px;
+        box-shadow: 0px 3px 30px 0px rgba(0, 0, 0, 0.427);
+        border-bottom-right-radius: 8%;
+        border-top-left-radius: 4%;
         overflow: hidden;
         border: none;
     }  
+
+
+    .logos{
+        opacity: 0;
+        transform: translateX(-100px);
+        transition : all 1s;
+    }
+
+    .logos.active{
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .logos:nth-child(1){
+        transition-delay: 300ms;
+    }
+
+    .logos:nth-child(2){
+        transition-delay: 500ms;
+    }
+
+    .logos:nth-child(3){
+        transition-delay: 700ms;
+    }
 }
