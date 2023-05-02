@@ -313,17 +313,6 @@ a{
         border: none;
     }  
 
-    .reveal{
-    position: relative;
-    transform: translateX(-70px);
-    opacity: 0;
-    transition:all 1s;
-    }
-
-    .reveal.active{
-    transform: translateX(0px);
-    opacity: 1;
-    }
 
 
     .logos{
