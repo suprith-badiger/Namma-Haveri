@@ -321,7 +321,7 @@ a{
     }
 
     .reveal.active{
-    transform: translateY(0px);
+    transform: translateX(0px);
     opacity: 1;
     }
 
