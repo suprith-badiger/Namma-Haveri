@@ -312,6 +312,18 @@ a{
         overflow: hidden;
         border: none;
     }  
+    
+    .reveal{
+    position: relative;
+    transform: translateY(0px);
+    opacity: 1;
+    transition:all 1s;
+    }
+
+    .reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+    }
 
 
 
