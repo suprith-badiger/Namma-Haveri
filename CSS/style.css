@@ -335,10 +335,11 @@ a{
     
     
     .reveal{
+        filter: blur(1px);
         position: relative;
         transform: translateX(-100px);
         opacity: 0;
-        transition:all 1s;
+        transition:all 2s;
     }
     
     .reveal.active{
@@ -348,8 +349,8 @@ a{
 
     .logos{
         opacity: 0;
-        transform: translateX(-100px);
-        transition : all 1s;
+        transform: translateX(-70%);
+        transition : all 700ms;
     }
 
     .logos.active{
@@ -358,14 +359,14 @@ a{
     }
 
     .logos:nth-child(1){
-        transition-delay: 300ms;
+        transition-delay: 200ms;
     }
 
     .logos:nth-child(2){
-        transition-delay: 500ms;
+        transition-delay: 400ms;
     }
 
     .logos:nth-child(3){
-        transition-delay: 700ms;
+        transition-delay: 600ms;
     }
 }
