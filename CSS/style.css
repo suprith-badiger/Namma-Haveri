@@ -19,6 +19,14 @@ body{
     padding: 20px;
 }
 
+#title{
+    color: rgb(40, 40, 40);
+    top: 0;
+    left: 0;
+    font-size: 1px;
+    visibility: none;
+}
+
 .title{
     font-size: 60px;
     font-weight:bolder;
@@ -261,12 +269,25 @@ a{
 
 @media (max-width:500px){
     
-    /* mobile view of cards */
 
     .title{
+        font-size: 1px;
+        color: rgb(40, 40, 40);
+    }
+
+    #title{
         font-size: 45px;
         font-weight: 600;
+        color: white;
+        margin-left: 30px;
+    }    
+    
+    .title.second-text:before{
+        border: none;
+        visibility: none;
+        animation: none;
     }
+
 
     .row{
         padding: 0 10px 10px;
@@ -287,6 +308,7 @@ a{
     #wellcome{
         font-family: 'Ubuntu', 'sans-serif';
         text-align: center;
+        font-size: 18px;
     }
     
     #discription{
@@ -294,34 +316,35 @@ a{
         font-size: 14px;
         text-align: left;
     }
-
-
-
     
     .card-container {
         display: flex;
         flex-wrap: wrap;
+        padding: 0 20px;
     }
     .card-container .card, .Wild-life .card-container .card {
         font-size: 16px;
         width: 100%;
-        margin: 10px;
+        margin: 21px;
         box-shadow: 0px 3px 30px 0px rgba(0, 0, 0, 0.427);
         border-bottom-right-radius: 8%;
         border-top-left-radius: 4%;
         overflow: hidden;
         border: none;
-    }  
+    } 
+    
     
     .reveal{
-    transform: none;
+        position: relative;
+        transform: translateX(-100px);
+        opacity: 0;
+        transition:all 1s;
     }
-
+    
     .reveal.active{
-    transform: none;
+        transform: translateX(0px);
+        opacity: 1;
     }
-
-
 
     .logos{
         opacity: 0;
