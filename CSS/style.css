@@ -314,15 +314,11 @@ a{
     }  
     
     .reveal{
-    position: relative;
-    transform: translateY(0px);
-    opacity: 1;
-    transition:all 1s;
+    transform: none;
     }
 
     .reveal.active{
-    transform: translateY(0px);
-    opacity: 1;
+    transform: none;
     }
 
 
