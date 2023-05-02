@@ -339,10 +339,11 @@ a{
         position: relative;
         transform: translateX(-100px);
         opacity: 0;
-        transition:all 2s;
+        transition:all 1600ms;
     }
     
     .reveal.active{
+        filter: blur(0);
         transform: translateX(0px);
         opacity: 1;
     }
