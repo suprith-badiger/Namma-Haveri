@@ -315,7 +315,7 @@ a{
 
     .reveal{
     position: relative;
-    transform: translateY(70px);
+    transform: translateX(-70px);
     opacity: 0;
     transition:all 1s;
     }
