@@ -335,7 +335,6 @@ a{
     
     
     .reveal{
-        filter: blur(1px);
         position: relative;
         transform: translateX(-100px);
         opacity: 0;
@@ -343,7 +342,6 @@ a{
     }
     
     .reveal.active{
-        filter: blur(0);
         transform: translateX(0px);
         opacity: 1;
     }
